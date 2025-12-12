@@ -1,0 +1,237 @@
+✅ 1. Inventory & Baseline Understanding
+
+Goal: Get a complete map of the system before you start digging.
+
+Collect all code repos, NSFs, design elements, scripts, config files.
+
+Identify modules, folders, shared libraries, external APIs, scheduled agents, integrations.
+
+Map high-level architecture (UI → Middleware → DB → External systems).
+
+Document tech stack, frameworks, database schemas.
+
+Outputs:
+
+System context diagram
+
+Module inventory
+
+Dependency list
+
+✅ 2. Static Code Analysis
+
+Goal: Understand structure without execution.
+
+Parse code to extract:
+
+Functions, classes, agents, views, forms, web services
+
+Call graphs & dependency chains
+
+Data models & schema relationships
+
+Tools:
+
+Domino: nsexport, DXL export, Ytria ScanEZ, custom parsers
+
+Java/.NET: Static analyzers, dependency scanners
+
+Identify dead code (unused forms, agents, endpoints).
+
+Outputs:
+
+Dependency graph
+
+Data model map
+
+Dead code list
+
+✅ 3. Runtime Behavior Analysis
+
+Goal: Understand how the system behaves in real usage.
+
+Enable logging/tracing (add temporary logs for Domino agents).
+
+Observe workflows in real UI.
+
+Capture:
+
+API calls
+
+DB reads/writes
+
+Scheduled tasks
+
+Error logs & exceptions
+
+Use tools like:
+
+Browser devtools
+
+Domino server logs (log.nsf, domlog.nsf)
+
+Network tracing
+
+Outputs:
+
+Behavior traces
+
+Sequence diagrams of key flows
+
+✅ 4. Business Rules Extraction
+
+Goal: Isolate the logic hidden in code.
+
+Identify conditional blocks, validations, formulas.
+
+Extract all "decision points":
+
+Field validations
+
+Routing rules
+
+Notifications & escalation
+
+Permission/ACL logic
+
+Interview SMEs (if available) to validate rules.
+
+Outputs:
+
+Business rules catalog
+
+Impact mapping
+
+✅ 5. Identify Core End-to-End User Flows
+
+Goal: Convert technical flows into business-meaningful steps.
+
+Common flows:
+
+Create issue / request
+
+Edit/update workflow
+
+Approval or routing
+
+Notifications
+
+Archive/close
+
+For each flow:
+
+Map screens → backend logic → data updates.
+
+Outputs:
+
+Flowcharts
+
+Sequence diagrams
+
+Swimlane diagrams
+
+✅ 6. Convert Flows & Rules into User Stories
+
+Goal: Produce clean Agile user stories based on reconstructed behavior.
+
+Story Template:
+As a <user role>, I want <feature/action> so that <business value>.
+
+How to derive them:
+
+Take each functional block → convert to user action.
+
+Take each business rule → convert to acceptance criteria.
+
+Take each workflow → convert into multiple stories.
+
+Example (Issue Tracker reverse-engineered)
+
+Story:
+As a user, I want to submit a new issue so that the support team can review and resolve it.
+
+Acceptance Criteria:
+
+User can enter title, category, description.
+
+System validates mandatory fields.
+
+On save → issue gets a unique ID.
+
+Notifications sent to assigned team.
+
+Status defaults to “Open”.
+
+Non-functional stories extracted:
+
+Logging & monitoring
+
+Permission/Role rules
+
+Archival process
+
+Performance constraints
+
+✅ 7. Build Story Mapping & Prioritization
+
+Goal: Organize stories logically for modernization.
+
+Group stories by:
+
+UI workflows
+
+CRUD actions
+
+Integrations
+
+Business rules
+
+Notifications
+
+Prioritize based on:
+
+Criticality
+
+Risk
+
+Modernization roadmap
+
+Dependencies
+
+Outputs:
+
+Story map
+
+Backlog spreadsheet/Jira import
+
+✅ 8. Validate with SMEs / Stakeholders
+
+Review extracted flows & stories with:
+
+Business users
+
+Product owners
+
+Support team
+
+Correct “hidden knowledge” gaps.
+
+Update backlog based on real behavior vs expected behavior.
+
+🔥 Final Output Package (Deliverables)
+
+A typical reverse-engineering + user-story pack includes:
+
+Architecture diagrams
+
+Dependency diagrams
+
+Data models
+
+Sequence/flow diagrams
+
+Business rules catalog
+
+Complete Jira-ready user stories
+
+Modernization priorities
