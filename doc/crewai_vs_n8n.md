@@ -128,8 +128,6 @@ Below is a **structured and detailed comparison** between **n8n** and **CrewAI**
 
 ---
 
-If you want, I can also create a **decision decision matrix** (scored comparison) tailored to your specific business or technical scenario.
-
 [1]: https://www.milesweb.com/blog/hosting/vps/n8n-vs-crewai/?utm_source=chatgpt.com "n8n vs CrewAI: Which Wins in Orchestrating AI Agents?"
 [2]: https://medium.com/%40prathibhashirsath24/n8n-vs-crewai-orchestrating-smarter-ai-workflows-c9d3dd9376f1?utm_source=chatgpt.com "n8n vs CrewAI: Orchestrating Smarter AI Workflows | by Pratibha Shirsath | Medium"
 [3]: https://hostadvice.com/blog/ai/automation/n8n-vs-crew-ai/?utm_source=chatgpt.com "n8n vs CrewAI (2026): Which Automation Platform Is Better?"
